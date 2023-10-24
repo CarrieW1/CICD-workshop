@@ -52,7 +52,7 @@ jobs:
             with:
               context: .
               push: true
-              tags: wrq:${{github.sha}}
+              tags: wrq123/wrq:${{github.sha}}
 
         -
             uses: actions/checkout@v3.5.2
@@ -67,7 +67,7 @@ jobs:
             run: |
               cosign sign --yes --key env://COSIGN_PRIVATE_KEY "${TAGS}"
             env:
-              TAGS: v2.1.1:${{github.sha}}
+              TAGS: wrq123/wrq:${{github.sha}}
               COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
               COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
         - 
