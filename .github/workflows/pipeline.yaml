@@ -89,7 +89,6 @@ jobs:
             name: Slack Notification
             uses: rtCamp/action-slack-notify@v2
             env:
-              SLACK_CHANNEL: mytest
               SLACK_MESSAGE: | 
                 Name: Wang Ruoqi
                 Matriculation: e1221869
