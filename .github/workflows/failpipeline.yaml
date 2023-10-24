@@ -15,8 +15,8 @@ jobs:
         -
             name: Check commit message
             run: |
-                名字1=$(git log -1 --pretty=%B)
-                if [[ $名字1 == *"#NORUN"* ]]; then
+                www=$(git log -1 --pretty=%B)
+                if [[ $www == *"#NORUN"* ]]; then
                     exit 1
                 fi
         -
