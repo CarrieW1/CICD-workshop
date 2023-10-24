@@ -76,7 +76,7 @@ jobs:
             env:
               SLACK_CHANNEL: mytest
               SLACK_MESSAGE: | 
-                Name: wrq
+                Name: WangRuoqi
                 Matriculation: e1221869
                 *Email*:e1221869@u.nus.edu
                 *Git*: https://github.com/CarrieW1/CICD-workshop
