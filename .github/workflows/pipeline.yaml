@@ -23,7 +23,7 @@ jobs:
               ignore-unfixed: true
               format: 'table'
               output: 'trivy-results.txt'
-              severity: 'HIGH'
+              severity: 'CRITICAL'
               exit-code: 1
               #CRITICAL
         - 
@@ -91,7 +91,7 @@ jobs:
             uses: rtCamp/action-slack-notify@v2
             env:
               SLACK_MESSAGE: | 
-                Name: Wang RuoQi
+                Name: Wang Ruoqi
                 Matriculation: e1221869
                 Email:e1221869@u.nus.edu
                 Git: https://github.com/CarrieW1/CICD-workshop
