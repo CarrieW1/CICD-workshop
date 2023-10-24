@@ -80,7 +80,7 @@ jobs:
                 Matriculation: e1221869
                 *Email*:e1221869@u.nus.edu
                 *Git*: https://github.com/CarrieW1/CICD-workshop
-                *Image*: https://hub.docker.com/repository/docker/wrq123/wrq/general
+                *Image*: https://hub.docker.com/repository/docker/wrq123/wrq
               SLACK_TITLE: 
               SLACK_USERNAME: DipSA 57 CICD
               SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
