@@ -48,7 +48,7 @@ jobs:
             name: Upload scan report
             uses: MeilCli/slack-upload-file@v3
             with:
-              slack_token: ${{ secrets.SLACK}}
+              slack_token: ${{ secrets.SLACK_TOKEN}}
               channel_id: ${{ secrets.IDNAME}}
               file_path: 'trivy-results.txt'
               initial_comment: 传递的信息
