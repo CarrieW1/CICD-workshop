@@ -1,4 +1,4 @@
-name: failpipeline.yaml
+name: pipeline.yaml
 on: 
     push:
         branches: 
@@ -30,7 +30,6 @@ jobs:
             if: failure()
             uses: rtCamp/action-slack-notify@v2
             env:
-              SLACK_CHANNEL: general
               SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
               SLACK_ICON: https://github.com/rtCamp.png?size=48
               SLACK_MESSAGE: |
