@@ -52,9 +52,8 @@ jobs:
             with:
               context: .
               push: true
-              tags: docker文件的名字:${{github.sha}}
-#注意在本地做：context: .
-#Digitally sign the image
+              tags: wrq:${{github.sha}}
+
         -
             uses: actions/checkout@v3.5.2
             with:
@@ -68,20 +67,20 @@ jobs:
             run: |
               cosign sign --yes --key env://COSIGN_PRIVATE_KEY "${TAGS}"
             env:
-              TAGS: ‘你自己的cosign版本’:${{github.sha}}
+              TAGS: v2.1.1:${{github.sha}}
               COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
               COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
         - 
             name: Slack Notification
             uses: rtCamp/action-slack-notify@v2
             env:
-              SLACK_CHANNEL: 频道
+              SLACK_CHANNEL: mytest
               SLACK_MESSAGE: | 
                 Name: wrq
-                Matriculation: 学号
-                *Email*:邮件
-                *Git*: URL
-                *Image*: URL
-              SLACK_TITLE: 标题
+                Matriculation: e1221869
+                *Email*:e1221869@u.nus.edu
+                *Git*: https://github.com/CarrieW1/CICD-workshop
+                *Image*: https://hub.docker.com/repository/docker/wrq123/wrq/general
+              SLACK_TITLE: 
               SLACK_USERNAME: DipSA 57 CICD
               SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
