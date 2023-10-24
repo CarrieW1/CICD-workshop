@@ -35,11 +35,14 @@ jobs:
             name: Slack Notification
             uses: rtCamp/action-slack-notify@v2
             env:
-              SLACK_CHANNEL: mytest
-              SLACK_MESSAGE: 传递的信息
-              SLACK_TITLE: 标题
-              SLACK_USERNAME: MyTest
-              SLACK_WEBHOOK: ${{ secrets.URL }}
+              SLACK_CHANNEL: general
+              SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+              SLACK_ICON: https://github.com/rtCamp.png?size=48
+              SLACK_MESSAGE: |
+                            wwwhhh
+              SLACK_TITLE: Post Title
+              SLACK_USERNAME: rtCamp
+              SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 #Upload scan report
         -
             name: Upload scan report
